@@ -2,6 +2,55 @@
   text-align: center;
 }
 
-div.error{
-  color:red;
+div.error {
+	color: red;
+}
+
+.card-container {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	margin: 2%;
+}
+
+.movie-card {
+	width: 30%;
+	margin: 1%;
+}
+
+header h1{
+  font-weight: bold;
+  margin:1.5%;
+  font-size: 3rem;
+}
+
+h2 {
+	font-weight: bold;
+}
+p{
+  color:black;
+}
+.bold {
+  font-weight: bold;
+  color:white
+}
+
+hr.underline {
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(
+		to right,
+		rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.75),
+		rgba(0, 0, 0, 0)
+	);
+}
+
+.card-info{
+  color:black;
+}
+
+
+.btn{
+  margin-top:2%;
 }

@@ -4,12 +4,13 @@ import pic from "../img/studioGhibli.png";
 import { connect } from "react-redux";
 import { getData } from "../actions/Actions";
 
-const MoviePage = props => {
+import { Button } from "reactstrap";
 
-    const handleGetData = e => {
-        e.preventDefault();
-        props.getData();
-    };
+const MoviePage = props => {
+	const handleGetData = e => {
+		e.preventDefault();
+		props.getData();
+	};
 	return (
 		<section>
 			<div>
@@ -18,19 +19,20 @@ const MoviePage = props => {
 			<div>
 				{props.isFetchingData ? (
 					<div>Retrieving Movies...</div>
-				) : (
-					<button onClick={handleGetData}>Show Me The Movies!</button>
-				)}
+				) : props.movies.length === 0 ? (
+					<Button color="info" onClick={handleGetData}>
+						Show Me The Movies!
+					</Button>
+				) : null}
 			</div>
 		</section>
 	);
 };
 const mapStateToProps = state => {
 	return {
-		isFetchingData: state.isFetchingData
+        isFetchingData: state.isFetchingData,
+        movies: state.movies
 	};
 };
 
 export default connect(mapStateToProps, { getData })(MoviePage);
-
-
