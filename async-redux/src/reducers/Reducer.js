@@ -1,7 +1,7 @@
 import { FETCH_DATA, UPDATE_MOVIES, SET_ERROR } from "../actions/Actions";
 
 const initialState = {
-  missions: [],
+  movies: [],
   isFetchingData: false,
   error: ""
 };
